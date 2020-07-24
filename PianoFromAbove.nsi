@@ -7,7 +7,7 @@
 ;--------------------------------
 ;General
 
-!define Version 1.1.0
+!define Version 1.1.0viz
 Name "Piano From Above"
 OutFile "PFA-${Version}-setup.exe"
 BrandingText "PFA ${Version}"
@@ -80,9 +80,9 @@ Section "Piano From Above (required)" SecProgramFile
 
     ${If} ${RunningX64}
         SetRegView 64
-        File "Release\PFA-1.1.0-x86_64.exe"
+        File "Release\PFA-${Version}-x86_64.exe"
     ${Else}
-        File "Release\PFA-1.1.0-x86.exe"
+        File "Release\PFA-${Version}-x86.exe"
     ${EndIf}
     File "Docs\Readme.txt"
     File "Docs\Credits.txt"
@@ -92,9 +92,9 @@ Section "Piano From Above (required)" SecProgramFile
 
     ;Add/Remove programns
     WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Piano From Above" "DisplayName" "Piano From Above"
-    WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Piano From Above" "DisplayVersion" "1.1.0"
+    WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Piano From Above" "DisplayVersion" "${Version}"
     WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Piano From Above" "DisplayIcon" "$INSTDIR\$TargetFile"
-    WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Piano From Above" "Publisher" "Brian Pantano"
+    WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Piano From Above" "Publisher" "Brian Pantano (Patch By Creepercdn)"
     WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Piano From Above" "UninstallString" '"$INSTDIR\Uninstall.exe"'
     WriteRegDWORD HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Piano From Above" "EstimatedSize" 1122
     WriteRegDWORD HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\Piano From Above" "NoModify" 1

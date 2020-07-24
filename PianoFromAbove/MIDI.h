@@ -72,7 +72,7 @@ public:
     static const int C4 = C8 - 4 * 12;
     static const int A0 = C8 - 7 * 12 - 3;
 	static const int minKey = 0;
-	static const int maxKey = 128;
+	static const int maxKey = 127;
     static const int Drums = 0x09;
     static const wstring Instruments[129];
     static const wstring &NoteName( int iNote );
