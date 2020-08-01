@@ -138,8 +138,5 @@
     <None Include="Images\Godowsky - Study of Chopin Etude Op. 10, No. 1.mid">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="Images\Lock.bmp">
-      <Filter>Resource Files</Filter>
-    </None>
   </ItemGroup>
 </Project>
